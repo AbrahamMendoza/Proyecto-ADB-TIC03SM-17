@@ -2,10 +2,7 @@ package Conexion;
 
 import java.sql.*;
 
-/**
- *
- * @author ErickBSG
- */
+
 public class Conexion {
 
     Connection con;
@@ -15,7 +12,7 @@ public class Conexion {
     public Connection ConectarBD() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/Sparrow", "root", "2JgF4hucHNRBHTeG");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/Sparrow", "root", "");
         } catch (ClassNotFoundException | SQLException error) {
             System.out.println("Error En La Conexion: " + error);
         }
@@ -25,7 +22,7 @@ public class Conexion {
     public void Conectar() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/Sparrow", "root", "2JgF4hucHNRBHTeG");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/Sparrow", "root", "");
         } catch (ClassNotFoundException | SQLException error) {
             System.out.println("Error En La Conexion: " + error);
         }

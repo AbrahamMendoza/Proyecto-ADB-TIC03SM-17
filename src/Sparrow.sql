@@ -1,0 +1,41 @@
+DROP DATABASE IF EXISTS Sparrow;
+
+CREATE DATABASE Sparrow;
+
+USE Sparrow;
+
+DROP TABLE IF EXISTS Producto;
+
+CREATE TABLE Producto(
+codigo VARCHAR(10) NOT NULL PRIMARY KEY,
+nombre VARCHAR(30) NOT NULL,
+descripcion VARCHAR(50) NOT NULL,
+cveCategoria INT NOT NULL,
+cantidad INT NOT NULL,
+precioCompra DOUBLE NOT NULL,
+precioVenta DOUBLE NOT NULL,
+cveProveedor INT NOT NULL)
+Engine = InnoDB;
+
+DESC Producto;
+
+DROP TABLE IF EXISTS Ventas;
+
+CREATE TABLE Ventas(
+codVenta INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+codigo VARCHAR(10) NOT NULL,
+nombre VARCHAR(30) NOT NULL,
+cantidad INT NOT NULL,
+precio DOUBLE NOT NULL,
+total DOUBLE NOT NULL)
+Engine = InnoDB;
+
+DESC Ventas;
+
+SELECT * FROM Ventas;
+
+INSERT INTO Producto VALUES (1,"COCA COLA","REFRESCO",1,100,12,15,1);
+INSERT INTO Producto VALUES (2,"SABRITAS","PASPAS",2,50,9,13,5);
+
+
+SELECT * FROM Producto;
